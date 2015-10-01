@@ -1,7 +1,7 @@
 Snowflake [] snow;
 void setup()
 {
-  size(500,500);
+  size(300,300);
   background(0, 0, 0);
 
   snow = new Snowflake [1000];
@@ -15,7 +15,7 @@ void mouseDragged()
  
   noStroke();
   fill(69,69,69);
-  ellipse(mouseX, mouseY, 10, 10);
+  ellipse(mouseX, mouseY, 5, 5);
 
 }
 
@@ -38,8 +38,8 @@ class Snowflake
   boolean isMoving;
   Snowflake()
   {
-    x = (int)(Math.random()*500);
-    y = (int)(Math.random()*500);
+    x = (int)(Math.random()*300);
+    y = (int)(Math.random()*300);
     isMoving = true;
   
 
@@ -71,9 +71,9 @@ class Snowflake
   }
   void wrap()
   {
-    if (y > 490) {
+    if (y > 290) {
       y = 0;
-      x =(int)(Math.random()*500);
+      x =(int)(Math.random()*300);
     }
   }
 }
